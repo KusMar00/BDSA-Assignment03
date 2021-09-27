@@ -30,5 +30,18 @@ namespace Assignment3.Tests
             // assert
             Assert.True(output);
         }
+
+        [Fact]
+        public void WordCount_given_7_unicode_words_returns_7()
+        {
+            // arrange
+            var input = "?hello this, is a word (37) count method!!";
+
+            // act
+            var output = input.WordCount();
+
+            // assert
+            Assert.Equal(7, output);
+        }
     }
 }

@@ -22,5 +22,12 @@ namespace Assignment3
             }
             return false;
         }
+
+        public static int WordCount(this string msg) 
+        {
+            string pattern = @"[\p{L}-]+";
+            MatchCollection matches = Regex.Matches(msg, pattern);
+            return matches.Count;
+        }
     }
 }
