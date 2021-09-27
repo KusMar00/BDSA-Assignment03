@@ -8,16 +8,20 @@ namespace Assignment3
     {
         static void Main(string[] args)
         {
-            // Flatten
+            // flatten
             var xs = new int[][] {new int[] {1,2}, new int[] {3,4}, new int[] {5,6}};
             xs.SelectMany(x => x).Print();
 
-            // Filter
+            // filter
             var ys = new int[]{700, 14, 45, 7000, 6, 49, 4, 2000, 400, 2012, 1999, 1997};
-            //ys.Where(i => i%7==0).Where(i => i>42).Print();
+            ys.Where(i => i%7==0).Where(i => i>42).Print();
 
-            // Leap year
+            // leap year
             ys.Where(i => (i>1582) && ((i%4==0 && i%100!=0) || (i%400==0))).Print();
+
+            
         }
+
+
     }
 }
